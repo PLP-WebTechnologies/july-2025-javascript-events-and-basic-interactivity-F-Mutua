@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Web Page</h1>
+            <div class="theme-toggle">
+                <span>Light</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span>Dark</span>
+            </div>
+        </header>
+
+        <section class="card counter-game">
+            <h2 class="section-title">Counter Game</h2>
+            <div class="counter-value" id="counter">0</div>
+            <div class="game-buttons">
+                <button id="decrement">Decrement</button>
+                <button id="reset">Reset</button>
+                <button id="increment">Increment</button>
+                <button id="double">Double</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Mouse Event Demonstration</h2>
+            <div class="mouse-events">
+                <div class="mouse-box" id="mouseBox">
+                    Hover, click or double-click me!
+                </div>
+                <div class="mouse-log" id="mouseLog">
+                    Mouse events will be logged here...
+                </div>
+            </div>
+            <div class="color-box">
+                <div class="color-option" style="background-color: #ff6b6b;" data-color="#ff6b6b"></div>
+                <div class="color-option" style="background-color: #4ecdc4;" data-color="#4ecdc4"></div>
+                <div class="color-option" style="background-color: #ffe66d;" data-color="#ffe66d"></div>
+                <div class="color-option" style="background-color: #4361ee;" data-color="#4361ee"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">FAQ Section</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is JavaScript used for?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>JavaScript is a programming language primarily used for creating interactive and dynamic content on websites. It allows you to implement complex features, validate forms, create games, and much more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is event handling in JavaScript?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Event handling is the process of responding to user interactions with a web page. JavaScript can listen for events like clicks, mouse movements, keyboard input, and form submissions, and execute code in response.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is DOM manipulation?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>DOM manipulation refers to using JavaScript to interact with and modify the Document Object Model (DOM) of a web page. This includes changing text, styles, attributes, adding or removing elements, and responding to user events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Contact Form</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                    <div class="error" id="name-error">Please enter a valid name</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email">
+                    <div class="error" id="email-error">Please enter a valid email</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Your password">
+                    <div class="error" id="password-error">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                    <div class="error" id="message-error">Please enter a message</div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="success-message" id="success-message">
+                Form submitted successfully! Thank you for your message.
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --text-color: #2b2d42;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.dark-mode {
+    --primary-color: #7209b7;
+    --secondary-color: #3a0ca3;
+    --text-color: #f8f9fa;
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: var(--transition);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.mouse-events {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+.mouse-box {
+            height: 150px;
+            border: 2px dashed var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+.mouse-log {
+            height: 150px;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+ .color-box {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+.color-option {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.counter-game {
+    text-align: center;
+}
+
+.counter-value {
+    font-size: 48px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+    max-height: 200px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.error {
+    color: #e63946;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success-message {
+    background-color: #d8f3dc;
+    color: #2d6a4f;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: none;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .game-buttons {
+        flex-direction: column;
+    }
+    .mouse-events {
+                grid-template-columns: 1fr;
+            }
+}
